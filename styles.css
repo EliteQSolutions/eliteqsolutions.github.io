@@ -117,14 +117,25 @@ h1 {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo span {
-    color: var(--accent-primary);
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    border-radius: 4px;
+    display: block;
 }
 
 nav a {
@@ -266,6 +277,46 @@ nav a:hover {
 .delay-1 { animation-delay: 1.5s; }
 .delay-2 { animation-delay: 3s; }
 .delay-3 { animation-delay: 4.5s; }
+
+/* About / Accreditations */
+.about {
+    padding: 2rem 2rem 4rem;
+}
+
+.about-card {
+    padding: 3rem;
+    text-align: center;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.badge-placeholder {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    padding: 1rem;
+}
 
 /* Services */
 .services {
