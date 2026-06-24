@@ -26,34 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Form Submission Handling (Non-Joinder Protocol)
-    const form = document.querySelector('.contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.textContent;
-            
-            // Simulate secure submission
-            btn.textContent = "Encrypting & Sending...";
-            btn.style.background = "var(--glass-border)";
-            btn.style.color = "var(--text-main)";
-            
-            setTimeout(() => {
-                btn.textContent = "Data Received. We will contact you.";
-                btn.style.background = "#27c93f"; // Success green
-                btn.style.color = "#000";
-                form.reset();
-                
-                // Reset button after 4 seconds
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = "var(--primary-gradient)";
-                    btn.style.color = "#000";
-                }, 4000);
-            }, 1500);
-        });
-    }
+    // 2. Form submission is handled by the dedicated inline script in index.html.
+    //    This handler has been removed to prevent conflicts with the Formspree integration.
 
     // 3. Header Scroll Effect (Glass morphing intensity)
     window.addEventListener('scroll', () => {
