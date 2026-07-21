@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Q Solutions | Pre-Litigation Intelligence for Attorneys</title>
+    <meta name="description" content="Elite Q Solutions delivers forensic OSINT intelligence packages that give litigation attorneys a factual edge before discovery. Built by a DOD veteran and certified intelligence analyst.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eliteqsolutions.com/attorneys">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliteqsolutions.com/attorneys">
+    <meta property="og:title" content="Pre-Litigation Intelligence for Attorneys | Elite Q Solutions">
+    <meta property="og:description" content="Structured OSINT intelligence delivered before discovery. Find the facts opposing counsel will find — before they do.">
+    <meta property="og:image" content="https://eliteqsolutions.com/images/EliteLogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .atty-hero { padding: 140px 0 80px; }
+        .atty-hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.2; font-weight: 800; color: var(--accent-secondary); max-width: 820px; }
+        .atty-hero .sub { font-size: 1.15rem; color: var(--text-muted); max-width: 660px; margin: 1.4rem 0 2.4rem; line-height: 1.7; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.4rem; }
+        .badge { background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.35); color: #a5b4fc; border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+        .atty-disclaimer { background: rgba(99,102,241,0.07); border-left: 3px solid rgba(99,102,241,0.6); border-radius: 0 8px 8px 0; padding: 1rem 1.4rem; font-size: 0.88rem; color: #94a3b8; max-width: 680px; margin-bottom: 2rem; }
+        .atty-disclaimer strong { color: #c7d2fe; }
+        .deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; margin-top: 2.4rem; }
+        .deliv-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; padding: 1.6rem; transition: all 0.25s; box-shadow: var(--card-shadow); }
+        .deliv-card:hover { border-color: var(--accent-primary); transform: translateY(-3px); box-shadow: var(--soft-shadow); }
+        .deliv-card .icon { font-size: 1.8rem; margin-bottom: 0.8rem; color: var(--accent-primary); }
+        .deliv-card h3 { font-size: 1rem; font-weight: 700; color: var(--accent-secondary); margin-bottom: 0.5rem; }
+        .deliv-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+        .offer-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        @media(max-width:640px){ .offer-panel { grid-template-columns: 1fr; } }
+        .offer-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 8px; padding: 2rem; box-shadow: var(--card-shadow); }
+        .offer-card.featured { border-color: var(--accent-primary); border-top: 4px solid var(--accent-primary); }
+        .offer-card .price { font-size: 2rem; font-weight: 800; color: var(--accent-secondary); margin: 0.5rem 0 0.25rem; }
+        .offer-card .price-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+        .offer-card ul { margin: 1.2rem 0 0; padding: 0; list-style: none; }
+        .offer-card ul li { display: flex; gap: 0.6rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.6rem; line-height: 1.5; }
+        .offer-card ul li::before { content: "✓"; color: var(--accent-primary); flex-shrink: 0; font-weight: 700; }
+        .faq-list { margin-top: 2rem; }
+        .faq-item { border-bottom: 1px solid var(--glass-border); padding: 1.4rem 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 1rem; font-weight: 700; color: var(--accent-secondary); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+        .faq-q .arrow { color: var(--accent-primary); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.25s; }
+        .faq-a { font-size: 0.92rem; color: #94a3b8; line-height: 1.7; margin-top: 0.8rem; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, opacity 0.25s ease; opacity: 0; }
+        .faq-item.open .faq-a { max-height: 400px; opacity: 1; }
+        .faq-item.open .arrow { transform: rotate(180deg); }
+        .atty-form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 2rem auto 0; }
+        .atty-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media(max-width:560px){ .atty-form .form-row { grid-template-columns: 1fr; } }
+        .atty-form input, .atty-form select, .atty-form textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.85rem 1rem; color: #e2e8f0; font-size: 0.92rem; font-family: 'Inter', sans-serif; transition: border-color 0.2s; box-sizing: border-box; }
+        .atty-form input:focus, .atty-form select:focus, .atty-form textarea:focus { outline: none; border-color: rgba(99,102,241,0.6); }
+        .atty-form select option { background: #0f172a; }
+        .atty-form textarea { resize: vertical; min-height: 110px; }
+        .atty-form .form-note { font-size: 0.78rem; color: #475569; text-align: center; margin-top: 0.5rem; }
+        .proof-bar { background: rgba(255,255,255,0.025); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1.6rem 0; margin: 3rem 0; }
+        .proof-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; }
+        .proof-item { text-align: center; }
+        .proof-item .label { font-size: 0.72rem; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; }
+        .proof-item .value { font-size: 1.05rem; font-weight: 700; color: #a5b4fc; margin-top: 0.2rem; }
+        section.atty-section { padding: 4rem 0; }
+        .section-eyebrow { font-size: 0.72rem; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+        .back-link { font-size: 0.85rem; color: #6366f1; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 2rem; opacity: 0.8; transition: opacity 0.2s; }
+        .back-link:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="container nav-content">
+            <a href="/" class="logo" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-main); letter-spacing: -0.5px; text-decoration: none;">
+                Elite Q <span style="color: var(--accent-primary);">Solutions</span>
+            </a>
+            <nav>
+                <a href="/#services">Capabilities</a>
+                <a href="/#methodology">The Standard</a>
+                <a href="#atty-contact" class="btn-primary">Request Package</a>
+                <a href="Family_Law_OSINT_Briefing.html" target="_blank" class="btn-secondary" style="margin-left: 1rem; border: 1px solid var(--accent-primary); color: var(--accent-primary); padding: 0.8rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Briefing PDF
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="atty-hero container">
+            <a href="/" class="back-link">← Back to Elite Q Solutions</a>
+            <div class="badge-row">
+                <span class="badge">For Litigation Attorneys</span>
+                <span class="badge">Pre-Discovery Only</span>
+                <span class="badge">Not Legal Advice</span>
+            </div>
+            <h1>Find What Opposing Counsel Will Find —<br><span class="highlight">Before They Use It Against Your Client.</span></h1>
+            <p class="sub">Elite Q Solutions delivers structured forensic OSINT intelligence reports built specifically to support pre-litigation strategy. We surface the publicly available facts, contradictions, and asset structures that change case value — before you walk into discovery.</p>
+            <div class="atty-disclaimer">
+                <strong>Disclosure:</strong> Elite Q Solutions is not a law firm. We do not provide legal advice, legal representation, or attorney-client services. All deliverables are factual research compilations from open-source intelligence. Interpretation and legal strategy remain exclusively with retained counsel.
+            </div>
+            <div class="hero-actions">
+                <a href="#atty-contact" class="btn-primary" id="atty-hero-cta">Request Your Validation Package</a>
+                <a href="Family_Law_OSINT_Briefing.html" target="_blank" class="btn-secondary" style="border: 2px solid var(--accent-primary); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; padding: 1rem 2rem; border-radius: 4px; font-weight: 600; transition: all 0.2s ease;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download Law Firm OSINT Briefing
+                </a>
+            </div>
+        </section>
+
+        <!-- PROOF BAR -->
+        <div class="proof-bar">
+            <div class="container proof-grid">
+                <div class="proof-item"><div class="label">Background</div><div class="value">USMC Veteran · DOD Contractor</div></div>
+                <div class="proof-item"><div class="label">Certification</div><div class="value">ISC2 Cybersecurity · BBA</div></div>
+                <div class="proof-item"><div class="label">Clearance</div><div class="value">DOD Secret (held)</div></div>
+                <div class="proof-item"><div class="label">Entity</div><div class="value">Elite Q Solutions LLC · EIN on file</div></div>
+            </div>
+        </div>
+
+        <!-- DELIVERABLES -->
+        <section id="what-delivered" class="atty-section container">
+            <p class="section-eyebrow">What You Receive</p>
+            <h2 class="section-title" style="margin-bottom:0.5rem;">The Validation Package</h2>
+            <p style="color:#94a3b8;max-width:580px;margin-bottom:0;">One structured intelligence report. Formatted for attorney use. Delivered as a working draft within the stated turnaround window.</p>
+            <div class="deliverables-grid">
+                <div class="deliv-card"><div class="icon">🕸️</div><h3>Entity &amp; Network Map</h3><p>Corporate structure, registered agents, known subsidiaries, and affiliated entities pulled from public filings and OSINT sources.</p></div>
+                <div class="deliv-card"><div class="icon">📄</div><h3>Statement Contradiction Analysis</h3><p>Public statements, press releases, regulatory filings, and social records cross-referenced for contradictions that create deposition leverage.</p></div>
+                <div class="deliv-card"><div class="icon">💸</div><h3>Asset &amp; Liability Tracing</h3><p>Open-source financial footprint, property records, UCC filings, and asset movement mapped to the named subject or entity.</p></div>
+                <div class="deliv-card"><div class="icon">🔍</div><h3>Digital Footprint Audit</h3><p>Online presence mapped across domains, social platforms, and archived web sources. Identifies what exists and where it lives.</p></div>
+                <div class="deliv-card"><div class="icon">⚠️</div><h3>Anomaly &amp; Risk Flags</h3><p>Structural irregularities, address discrepancies, dissolved entities, and other red-flag patterns surfaced and documented.</p></div>
+                <div class="deliv-card"><div class="icon">📋</div><h3>Source-Referenced Report</h3><p>All findings delivered with direct source citations. No speculation. Every claim backed by retrievable, publicly accessible data.</p></div>
+            </div>
+        </section>
+
+        <!-- OFFER TIERS -->
+        <section class="atty-section container">
+            <p class="section-eyebrow">Engagement Options</p>
+            <h2 class="section-title">Choose Your Scope</h2>
+            <p style="color:#94a3b8;max-width:560px;margin:0 0 0.5rem;">Structured to match your case urgency. Both tiers use the same methodology — scope and depth differ.</p>
+            <div class="offer-panel">
+                <div class="offer-card" id="offer-validation">
+                    <div class="price-label">Attorney Validation Package</div>
+                    <div class="price">$500 – $1,500</div>
+                    <p style="color:#64748b;font-size:0.82rem;margin-bottom:1rem;">One-time · Delivered in 3–5 business days</p>
+                    <ul>
+                        <li>Single subject or entity audit</li>
+                        <li>Entity &amp; network mapping</li>
+                        <li>Statement contradiction scan</li>
+                        <li>Digital footprint summary</li>
+                        <li>Source-cited PDF report</li>
+                        <li>One revision pass included</li>
+                    </ul>
+                </div>
+                <div class="offer-card featured" id="offer-deep-audit">
+                    <div class="price-label">Pre-Litigation Deep Audit</div>
+                    <div class="price">$10,000 – $15,000</div>
+                    <p style="color:#64748b;font-size:0.82rem;margin-bottom:1rem;">One-time · Delivered in 7–14 business days</p>
+                    <ul>
+                        <li>Everything in Validation Package</li>
+                        <li>Full financial tracing &amp; asset mapping</li>
+                        <li>Multi-entity shell structure analysis</li>
+                        <li>Executive background deep-dive</li>
+                        <li>Litigation-ready evidence compilation</li>
+                        <li>Priority support &amp; debrief call</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="methodology atty-section">
+            <div class="container">
+                <p class="section-eyebrow">The Process</p>
+                <h2 class="section-title">How This Works</h2>
+                <div class="methodology-content">
+                    <p class="large-text">Simple. Structured. <strong>No ambiguity.</strong></p>
+                    <ul class="truth-list">
+                        <li><strong>Step 1 — Submit.</strong> Complete the form below. Provide the subject name, entity, and case context you're comfortable sharing.</li>
+                        <li><strong>Step 2 — Scope Call.</strong> We confirm scope, timeline, and engagement terms within 24 hours. NDA available on request.</li>
+                        <li><strong>Step 3 — Delivery.</strong> Structured report delivered to your secure email within the agreed window. Source citations included.</li>
+                        <li><strong>Step 4 — Done.</strong> You use the intelligence. Your strategy. Your client. Our research feeds your position — nothing more.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="atty-section container">
+            <p class="section-eyebrow">Before You Reach Out</p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+
+                <div class="faq-item" id="faq-what">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is this, exactly? <span class="arrow">↓</span></div>
+                    <div class="faq-a">Elite Q Solutions is a forensic intelligence and OSINT research firm. We use open-source intelligence methodology — public records, regulatory filings, digital archives, corporate databases, and web-layer sources — to compile structured, factual intelligence reports on individuals, entities, or corporate structures. We are not a law firm or a private investigation agency. Think of us as a highly specialized research analyst delivering a structured, source-cited brief built to support your pre-litigation strategy.</div>
+                </div>
+
+                <div class="faq-item" id="faq-legal">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is this legal advice? <span class="arrow">↓</span></div>
+                    <div class="faq-a">No. Elite Q Solutions does not provide legal advice, legal strategy, or legal representation of any kind. All deliverables are factual research compilations drawn from publicly accessible open-source intelligence. How you interpret, deploy, or apply those facts within a legal strategy is entirely within your purview as retained counsel. We provide the intelligence layer. You provide the legal expertise. There is no attorney-client relationship created between Elite Q Solutions and your client.</div>
+                </div>
+
+                <div class="faq-item" id="faq-who-uses">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Who uses this service? <span class="arrow">↓</span></div>
+                    <div class="faq-a">Our primary clients in this validation phase are solo litigation attorneys and small litigation firms handling civil, commercial, or financial disputes where pre-discovery intelligence provides a material advantage. We also work with forensic accountants, licensed private investigation firms, and corporate general counsel managing pre-litigation risk. If you are bringing a case where the opposing party's financial structure, public contradictions, or digital footprint could shift case value — this is built for you.</div>
+                </div>
+
+                <div class="faq-item" id="faq-delivered">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What exactly is delivered? <span class="arrow">↓</span></div>
+                    <div class="faq-a">You receive a structured PDF intelligence brief. Depending on scope, this includes: entity and corporate network mapping, statement and filing contradiction analysis, digital footprint summary, asset and property tracing from public records, and an anomaly and risk flag section. Every finding is cited with a direct, retrievable source. No speculation. No interpretation beyond what the data shows. The report is formatted to be readable by attorneys and non-attorney stakeholders alike.</div>
+                </div>
+
+                <div class="faq-item" id="faq-turnaround">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is the turnaround time? <span class="arrow">↓</span></div>
+                    <div class="faq-a">The Validation Package is delivered within <strong>3–5 business days</strong> from confirmed scope and payment. The Pre-Litigation Deep Audit is delivered within <strong>7–14 business days</strong>. Rush engagements (48–72 hour delivery) are available at a premium and subject to current capacity. Turnaround is confirmed in writing at the time of engagement. Timeline integrity is non-negotiable — we do not take on more than we can deliver on time.</div>
+                </div>
+
+                <div class="faq-item" id="faq-confidential">
+                    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">How is my submission handled? <span class="arrow">↓</span></div>
+                    <div class="faq-a">All submissions are treated as strictly confidential from receipt. An NDA is available upon request before any substantive case information is shared. We do not share client identities, case details, or deliverable contents with any third party. Work product is delivered to a secure channel specified by you. Our founder held a DOD Secret clearance — confidentiality is not a marketing claim here; it is an operating standard.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section id="atty-contact" class="cta-section atty-section container">
+            <div class="glass-card cta-card">
+                <h2>Request Your Validation Package</h2>
+                <p>Submit your case context below. We confirm scope within 24 hours. No obligation until scope is agreed in writing.</p>
+                <form class="atty-form" id="attorney-intake-form">
+                    <div class="form-row">
+                        <input type="text" id="atty-name" name="attorney_name" placeholder="Attorney Full Name" required autocomplete="name">
+                        <input type="text" id="atty-firm" name="firm_name" placeholder="Law Firm / Practice Name">
+                    </div>
+                    <div class="form-row">
+                        <input type="email" id="atty-email" name="email" placeholder="Professional Email Address" required autocomplete="email">
+                        <input type="tel" id="atty-phone" name="phone" placeholder="Phone (Optional)" autocomplete="tel">
+                    </div>
+                    <select id="atty-scope" name="scope" required>
+                        <option value="" disabled selected>Select Package Scope</option>
+                        <option value="validation">Validation Package ($500–$1,500)</option>
+                        <option value="deep-audit">Pre-Litigation Deep Audit ($10K–$15K)</option>
+                        <option value="unsure">Not Sure — Need a Scoping Call First</option>
+                    </select>
+                    <select id="atty-case-type" name="case_type">
+                        <option value="" disabled selected>Case Type (Optional)</option>
+                        <option value="civil">Civil Litigation</option>
+                        <option value="commercial">Commercial Dispute</option>
+                        <option value="financial">Financial / Hidden Assets</option>
+                        <option value="family">Family Law / Asset Discovery</option>
+                        <option value="employment">Employment / Wrongful Termination</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select id="atty-timeline" name="timeline" required>
+                        <option value="" disabled selected>Timeline Urgency</option>
+                        <option value="standard">Standard (5–7 business days)</option>
+                        <option value="priority">Priority (3–5 business days)</option>
+                        <option value="rush">Rush (48–72 hours — subject to availability)</option>
+                    </select>
+                    <textarea id="atty-brief" name="case_brief" placeholder="Briefly describe the subject of inquiry and what you're trying to establish. General context is sufficient — do not include privileged details until an NDA is in place." rows="5"></textarea>
+                    <button type="submit" class="btn-primary w-100" id="atty-submit-btn">Submit Intake Request — Confidential</button>
+                    <p class="form-note">Receipt acknowledged within 24 hours. No obligation until scope is confirmed in writing. All submissions are strictly confidential. An NDA is available on request before substantive information is shared.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo" style="font-family: var(--font-heading); font-weight: bold; margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--text-main);">
+                Elite Q <span style="color: var(--accent-primary);">Solutions</span>
+            </div>
+            <div class="social-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem;">
+                <a href="mailto:support@eliteqsolutions.com" style="color: var(--accent-secondary); font-weight: 600; text-decoration: none;">support@eliteqsolutions.com</a>
+                <a href="tel:5023778924" style="color: var(--accent-secondary); font-weight: 600; text-decoration: none;">502-377-8924</a>
+                <a href="https://linkedin.com/in/qualla-t" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: var(--accent-secondary); font-weight: 600; text-decoration: none;">LinkedIn</a>
+            </div>
+            <p>&copy; 2026 Elite Q Solutions LLC. All Rights Reserved.</p>
+            <p style="font-size:0.75rem;color:#475569;margin-top:0.5rem;max-width:600px;margin-left:auto;margin-right:auto;">Elite Q Solutions is not a law firm. Services described on this page do not constitute legal advice, legal representation, or the practice of law. All intelligence work is based exclusively on publicly available open-source information.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.faq-q').forEach(function(q) {
+            q.addEventListener('click', function() {
+                var item = this.closest('.faq-item');
+                var isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(function(el) {
+                    el.classList.remove('open');
+                    el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) { item.classList.add('open'); this.setAttribute('aria-expanded', 'true'); }
+            });
+            q.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+            });
+        });
+    </script>
+</body>
+</html>
