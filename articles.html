@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Q Solutions | Articles & Insights</title>
+    <meta name="description" content="Insights, strategies, and methodologies on forensic OSINT, digital footprint mapping, and pre-litigation asset discovery for family law attorneys.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eliteqsolutions.com/articles.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliteqsolutions.com/articles.html">
+    <meta property="og:title" content="Elite Q Solutions | Articles & Insights">
+    <meta property="og:description" content="Insights, strategies, and methodologies on forensic OSINT, digital footprint mapping, and pre-litigation asset discovery.">
+    <meta property="og:image" content="https://eliteqsolutions.com/images/EliteLogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero { padding: 140px 0 80px; text-align: center; }
+        .page-hero h1 { font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.1; font-weight: 800; color: var(--text-main); margin-bottom: 1.5rem; letter-spacing: -1px; }
+        .page-hero .sub { font-size: 1.15rem; color: var(--text-muted); max-width: 660px; margin: 0 auto 2.4rem; line-height: 1.7; }
+        
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto 6rem; padding: 0 1rem; }
+        
+        .article-card { background: var(--bg-surface); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; box-shadow: var(--card-shadow); display: flex; flex-direction: column; }
+        .article-card:hover { transform: translateY(-5px); border-color: rgba(99,102,241,0.5); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+        
+        .article-img { height: 200px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .article-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        .article-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+        .article-title { font-size: 1.3rem; font-weight: 700; color: var(--accent-secondary); margin-bottom: 1rem; line-height: 1.4; }
+        .article-excerpt { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+        
+        .article-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: auto; }
+        .article-date { font-size: 0.85rem; color: #64748b; }
+        .read-more { font-size: 0.9rem; font-weight: 600; color: var(--accent-primary); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+        .article-card:hover .read-more { gap: 0.6rem; }
+        
+        .coming-soon-badge { display: inline-block; background: rgba(255,255,255,0.1); color: #fff; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px; margin-left: 0.5rem; vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="container nav-content">
+            <a href="/" class="logo" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-main); letter-spacing: -0.5px; text-decoration: none;">
+                Elite Q <span style="color: var(--accent-primary);">Solutions</span>
+            </a>
+            <nav>
+                <a href="/#services">Capabilities</a>
+                <a href="attorneys.html">For Attorneys</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="articles.html" style="color: var(--accent-primary); font-weight: 600;">Articles</a>
+                <a href="#contact" class="btn-primary" style="margin-left: 2rem;">Request SFIR</a>
+                <a href="Family_Law_OSINT_Briefing.html" target="_blank" class="btn-secondary" style="margin-left: 1rem; border: 1px solid var(--accent-primary); color: var(--accent-primary); padding: 0.8rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Briefing PDF
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>OSINT <span class="highlight">Insights</span></h1>
+                <p class="sub">Methodologies, strategies, and thought leadership on utilizing public digital footprints in high-net-worth divorce and family law litigation.</p>
+            </div>
+        </section>
+
+        <section class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-img">🔍</div>
+                <div class="article-content">
+                    <div class="article-tag">Methodology</div>
+                    <h2 class="article-title">Why "Asset Searches" Fail (And Digital Footprint Mapping Works)</h2>
+                    <p class="article-excerpt">Traditional private investigators run database checks that only show what the subject hasn't bothered to hide. Modern OSINT tracks the structural breadcrumbs of where assets are actually concealed.</p>
+                    <div class="article-footer">
+                        <span class="article-date">Coming Soon</span>
+                        <a href="#" class="read-more">Read Article <span>→</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-img">🌐</div>
+                <div class="article-content">
+                    <div class="article-tag">Case Strategy</div>
+                    <h2 class="article-title">The Role of Web Archiving in Spousal Support Disputes</h2>
+                    <p class="article-excerpt">How deleted business websites, cached executive bios, and archived press releases can establish true earning capacity when opposing counsel claims insolvency.</p>
+                    <div class="article-footer">
+                        <span class="article-date">Coming Soon</span>
+                        <a href="#" class="read-more">Read Article <span>→</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-img">🏢</div>
+                <div class="article-content">
+                    <div class="article-tag">Corporate Tracing</div>
+                    <h2 class="article-title">Deconstructing the Multi-State LLC Shell Game</h2>
+                    <p class="article-excerpt">A litigator's guide to identifying Wyoming and Delaware holding companies using registered agent cross-referencing and UCC filing analysis.</p>
+                    <div class="article-footer">
+                        <span class="article-date">Coming Soon</span>
+                        <a href="#" class="read-more">Read Article <span>→</span></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <div style="text-align: center; margin: 0 auto 6rem; padding: 2rem; background: rgba(99,102,241,0.05); max-width: 800px; border-radius: 12px; border: 1px solid rgba(99,102,241,0.2);">
+            <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Have a specific case scenario?</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">We can assess viability and provide a scoping estimate within 24 hours.</p>
+            <a href="attorneys.html" class="btn-primary">Request an Attorney Validation Package</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo" style="font-family: var(--font-heading); font-weight: bold; margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--text-main);">
+                Elite Q <span style="color: var(--accent-primary);">Solutions</span>
+            </div>
+            <div class="social-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem;">
+                <a href="mailto:qualla.t@eliteqsolutions.com" style="color: var(--accent-secondary); font-weight: 600; text-decoration: none;">qualla.t@eliteqsolutions.com</a>
+                <a href="https://linkedin.com/in/qualla-t" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: var(--accent-secondary); font-weight: 600; text-decoration: none;">LinkedIn</a>
+            </div>
+            <p>&copy; 2026 Elite Q Solutions LLC. All Rights Reserved.</p>
+            <p style="font-size:0.75rem;color:#475569;margin-top:0.5rem;max-width:600px;margin-left:auto;margin-right:auto;">Elite Q Solutions is not a law firm. Services described on this page do not constitute legal advice, legal representation, or the practice of law.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
