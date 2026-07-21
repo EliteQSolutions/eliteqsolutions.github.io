@@ -69,108 +69,8 @@
                     <p><strong>Security Notice:</strong> Do NOT submit passwords, bank credentials, full card numbers, Social Security numbers, or any account access credentials through this form. We will never ask for these. This form collects only the information necessary to scope and deliver your SFIR report.</p>
                 </div>
 
-                <form id="sfir-intake-form" action="https://formspree.io/f/mwvdvljg" method="POST">
-                    <input type="hidden" name="_subject" value="[Elite Q] SFIR Intake Submission">
-                    <input type="hidden" name="_replyto" value="">
-
-                    <h2 style="font-size:1.3rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:1px solid var(--glass-border);">Attorney Information</h2>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Contact Name <span class="required">*</span></label>
-                            <input type="text" name="attorney_name" id="intake_attorney_name" placeholder="Full name" required autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label>Firm Name <span class="required">*</span></label>
-                            <input type="text" name="attorney_firm" id="intake_attorney_firm" placeholder="Firm / Organization" required autocomplete="organization">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Email Address <span class="required">*</span></label>
-                        <input type="email" name="attorney_email" id="intake_attorney_email" placeholder="Professional email address" required autocomplete="email">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Matter Type <span class="required">*</span></label>
-                        <select name="matter_type" id="intake_matter_type" required>
-                            <option value="" disabled selected>Select matter type</option>
-                            <option value="hidden_assets">Hidden Assets / Shell Companies</option>
-                            <option value="crypto_divorce">Cryptocurrency Discovery in Divorce</option>
-                            <option value="lifestyle_discrepancy">Lifestyle Discrepancy / Undeclared Income</option>
-                            <option value="corporate_veil">Piercing the Corporate Veil (Family Biz)</option>
-                            <option value="fraudulent_transfer">Fraudulent Transfers / Dissipation</option>
-                            <option value="other">Other Family Law Matter</option>
-                        </select>
-                    </div>
-
-                    <h2 style="font-size:1.3rem;margin:2.5rem 0 1.5rem;padding-bottom:0.75rem;border-bottom:1px solid var(--glass-border);">Target Information</h2>
-
-                    <div class="form-group">
-                        <label>Subject / Entity Name <span class="required">*</span></label>
-                        <input type="text" name="target_name" id="intake_target_name" placeholder="Known name of target operator or entity" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Known Domains / Websites <span class="required">*</span></label>
-                        <textarea name="target_domains" id="intake_target_domains" placeholder="List all known domains, websites, or URLs associated with the target (one per line)" rows="3" required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Description of Suspected Financial Deception <span class="required">*</span></label>
-                        <textarea name="scam_description" id="intake_scam_description" placeholder="Factual narrative: what happened, relevant dates, payment methods used, and known transaction details. No privileged details needed." rows="5" required></textarea>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Estimated Financial Loss</label>
-                            <select name="loss_exposure" id="intake_loss_exposure">
-                                <option value="" selected>Select range (optional)</option>
-                                <option value="under_1k">Under $1,000</option>
-                                <option value="1k_5k">$1,000 – $5,000</option>
-                                <option value="5k_25k">$5,000 – $25,000</option>
-                                <option value="25k_100k">$25,000 – $100,000</option>
-                                <option value="over_100k">Over $100,000</option>
-                                <option value="undetermined">Undetermined</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Payment Gatekeepers</label>
-                            <input type="text" name="target_gatekeeper" id="intake_target_gatekeeper" placeholder="e.g. Stripe, PayPal, Wire Transfer">
-                        </div>
-                    </div>
-
-                    <h2 style="font-size:1.3rem;margin:2.5rem 0 1.5rem;padding-bottom:0.75rem;border-bottom:1px solid var(--glass-border);">Acknowledgments</h2>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" name="auth_confirmed" id="intake_auth_checkbox" required>
-                        <span>I confirm I have the authority to request research on these targets on behalf of my client. <span class="required">*</span></span>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" name="scope_acknowledged" id="intake_scope_checkbox" required>
-                        <span>I acknowledge this review is purely advisory, based on public records, and does not constitute legal advice, private investigation, or a definitive declaration of financial deception. <span class="required">*</span></span>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" name="privacy_agreed" id="intake_privacy_checkbox" required>
-                        <span>I agree that no passwords, bank credentials, full card numbers, or sensitive identity documents will be submitted through this form. <span class="required">*</span></span>
-                    </div>
-
-                    <button type="submit" class="btn-primary w-100" id="intake-submit" style="margin-top:1.5rem;width:100%;">Submit SFIR Intake</button>
-
-                    <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:1rem;">
-                        By submitting, you agree to our <a href="terms.html" style="color:var(--accent-primary);">Terms of Service</a> and <a href="privacy.html" style="color:var(--accent-primary);">Privacy Policy</a>.
-                    </p>
-
-                    <p id="intake-error" style="display:none;color:var(--alert-red);text-align:center;margin-top:1rem;">
-                        Something went wrong. Please email qualla.t@eliteqsolutions.com directly.
-                    </p>
-                </form>
-
-                <div id="intake-confirmation" style="display:none;padding:3rem 2rem;text-align:center;">
-                    <h3 style="margin-bottom:1rem;font-size:1.5rem;">Intake Received.</h3>
-                    <p style="color:var(--text-muted);line-height:1.8;max-width:480px;margin:0 auto;">Your SFIR intake has been securely submitted. We will validate target visibility and confirm scope within 1 business day. No payment is required until scope is agreed.</p>
+                <div id="jotform-embed-container" style="width: 100%; min-height: 800px;">
+                    <script type="text/javascript" src="https://pci.jotform.com/jsform/262015029531043"></script>
                 </div>
             </div>
         </section>
@@ -191,49 +91,7 @@
     </footer>
 
     <script>
-    (function () {
-        var form = document.getElementById('sfir-intake-form');
-        var confirmation = document.getElementById('intake-confirmation');
-        var submitBtn = document.getElementById('intake-submit');
-        var errorMsg = document.getElementById('intake-error');
-
-        if (!form) return;
-
-        var emailInput = document.getElementById('intake_attorney_email');
-        var replyToInput = form.querySelector('input[name="_replyto"]');
-        if (emailInput && replyToInput) {
-            emailInput.addEventListener('input', function () {
-                replyToInput.value = emailInput.value;
-            });
-        }
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            submitBtn.textContent = 'Submitting…';
-            submitBtn.disabled = true;
-            if (errorMsg) errorMsg.style.display = 'none';
-
-            var data = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(function (response) {
-                if (response.ok) {
-                    form.style.display = 'none';
-                    if (confirmation) { confirmation.style.display = 'block'; }
-                } else {
-                    throw new Error('Submission error');
-                }
-            })
-            .catch(function (err) {
-                submitBtn.textContent = 'Submit SFIR Intake';
-                submitBtn.disabled = false;
-                if (errorMsg) errorMsg.style.display = 'block';
-            });
-        });
-    }());
+        // Form submission is now handled securely via Jotform iframe embed.
     </script>
 </body>
 </html>
