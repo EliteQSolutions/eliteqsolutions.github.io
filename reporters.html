@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Elite Q Solutions | Claim Verification Brief</title>
+    <meta name="description" content="Claim Verification Briefs for Investigative Newsrooms and Independent Journalists. $250 flat rate. Delivered in 48 hours.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* — Design System — */
+        :root {
+            --bg-primary: #0a0c10;
+            --bg-secondary: #111827;
+            --bg-card: #1a2233;
+            --bg-card-hover: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #3b82f6;
+            --accent-blue-hover: #2563eb;
+            --accent-emerald: #10b981;
+            --border-subtle: #1e293b;
+            --border-card: #2d3748;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+            --shadow-glow: 0 0 40px rgba(59,130,246,0.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* — Noise texture overlay — */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrapper { position: relative; z-index: 1; }
+
+        /* — Header — */
+        .site-header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.04em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent-blue); }
+        .badge-pilot {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 500;
+            background: rgba(59,130,246,0.12);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(59,130,246,0.2);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* — Hero — */
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-emerald);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            font-size: 0.78rem;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .lead {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        /* — Pricing Card — */
+        .pricing-card {
+            max-width: 520px;
+            margin: 0 auto 4rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-emerald));
+        }
+        .pricing-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-card .price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0.75rem 0 0.25rem;
+        }
+        .pricing-card .price-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            text-decoration: none;
+            padding: 0.9rem 2.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: var(--accent-blue-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(59,130,246,0.25);
+        }
+        .btn-secondary {
+            display: inline-block;
+            color: var(--accent-blue);
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            margin-top: 0.75rem;
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent-blue);
+            background: rgba(59,130,246,0.06);
+        }
+
+        /* — Features — */
+        .features-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .features-section h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            transition: all 0.25s ease;
+        }
+        .feature-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(59,130,246,0.2);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            background: rgba(59,130,246,0.1);
+        }
+
+        /* — Process — */
+        .process-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .process-section h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+        .process-steps {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-emerald));
+            border-radius: 2px;
+        }
+        .step {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+        .step::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.65rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 2px solid var(--bg-primary);
+        }
+        .step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        /* — Consent / Legal — */
+        .consent-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .consent-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+        .consent-box h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .consent-box p, .consent-box li {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+        .consent-box ul {
+            padding-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        .consent-box li { margin-bottom: 0.4rem; }
+
+        /* — Footer — */
+        .site-footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        .site-footer p { margin-bottom: 0.3rem; }
+
+        /* — Jotform Embed — */
+        .jotform-embed-container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .jotform-embed-container iframe {
+            width: 100%;
+            min-height: 700px;
+            border: none;
+            border-radius: var(--radius);
+        }
+        .jotform-placeholder {
+            background: var(--bg-card);
+            border: 2px dashed var(--border-card);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .jotform-placeholder code {
+            display: block;
+            margin-top: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+        }
+
+        /* — Responsive — */
+        @media (max-width: 640px) {
+            .features-grid { grid-template-columns: 1fr; }
+            .hero { padding: 3rem 1.5rem 2rem; }
+            .pricing-card { margin: 0 1rem 3rem; padding: 2rem 1.5rem; }
+            .site-header { padding: 1rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+        <a href="/reporters" class="logo">ELITE<span>Q</span></a>
+        <span class="badge-pilot">PILOT PROGRAM</span>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <span class="hero-eyebrow">For Investigative Newsrooms & Independent Journalists</span>
+        <h1>Verify claims against public records before you publish.</h1>
+        <p class="lead">
+            Submit a specific claim. We verify it against corporate registries, court filings, domain records, and public financial data. You receive a structured brief separating verified facts from analytical inferences — delivered in 48 hours.
+        </p>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-card" id="pricing">
+        <h2>Claim Verification Brief</h2>
+        <div class="price">$250</div>
+        <p class="price-sub">Flat rate per claim. Delivered in 48 hours. One revision included.</p>
+        <a href="#intake-form" class="btn-primary">Request Verification Brief</a>
+        <br>
+        <a href="/assets/sample-reporter-brief.pdf" class="btn-secondary" target="_blank">View Sample Brief →</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <h2>What You Receive</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Public Records Verification</h3>
+                <p>Corporate registries, court dockets, property records, and financial filings cross-referenced against the claim you submit.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Digital Footprint Mapping</h3>
+                <p>Historical WHOIS, DNS records, web archives, and infrastructure tracing for domains and entities involved.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>Evidence Separation Standard</h3>
+                <p>Every finding is explicitly classified as <strong>Verified Public Record</strong> or <strong>Analytical Inference</strong>. No guesswork presented as fact.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3>Archive-Ready PDF</h3>
+                <p>Timestamped, source-cited, and formatted for editorial review. Every URL archived for permanence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <h2>How It Works</h2>
+        <div class="process-steps">
+            <div class="step">
+                <h3>1. Submit Your Claim</h3>
+                <p>Provide the specific claim, the target entity, and any supporting context through our secure intake form below.</p>
+            </div>
+            <div class="step">
+                <h3>2. Scope Confirmation</h3>
+                <p>We confirm the claim is verifiable through public sources within 4 hours. If not, you receive a full refund immediately.</p>
+            </div>
+            <div class="step">
+                <h3>3. Research & Verification</h3>
+                <p>Our analysts run the claim against public corporate registries, court records, domain history, and open-source intelligence databases.</p>
+            </div>
+            <div class="step">
+                <h3>4. Delivery</h3>
+                <p>You receive a structured PDF clearly separating verified facts from inferences, with all sources cited and timestamped.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intake Form -->
+    <section class="jotform-embed-container" id="intake-form">
+        <!-- JOTFORM_EMBED_PLACEHOLDER: Replace this div with the Jotform iframe once the form ID is available -->
+        <div class="jotform-placeholder">
+            <p><strong>Intake form loading...</strong></p>
+            <p>If the form does not appear, please contact us directly.</p>
+            <code>JOTFORM_ID: PENDING_AUTHORIZATION</code>
+        </div>
+        <!-- To activate: replace the div above with:
+             <iframe src="https://form.jotform.com/JOTFORM_ID_HERE" title="Claim Verification Brief Intake" allowfullscreen></iframe>
+        -->
+    </section>
+
+    <!-- Consent / Legal -->
+    <section class="consent-section">
+        <div class="consent-box">
+            <h3>Scope & Privacy</h3>
+            <p>By submitting a claim, you confirm this request is for journalistic, documentary, or public-interest research. Elite Q Solutions:</p>
+            <ul>
+                <li>Uses only publicly available data and open-source intelligence methods.</li>
+                <li>Does <strong>not</strong> engage in illegal hacking, pretexting, or acquisition of sealed records.</li>
+                <li>Does <strong>not</strong> guarantee legal admissibility or beneficial ownership.</li>
+                <li>Explicitly separates verified public records from analytical inferences in every deliverable.</li>
+                <li>Does <strong>not</strong> share your identity or findings with third parties.</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>Refund Policy:</strong> If we determine the claim is unverifiable through public records after scope review, you receive a full refund. Once research commences, no refunds are issued.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Elite Q Solutions. All rights reserved.</p>
+        <p>This page is not indexed by search engines and is accessible by direct link only.</p>
+    </footer>
+
+</div>
+</body>
+</html>
