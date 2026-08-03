@@ -453,18 +453,19 @@
         </div>
     </section>
 
-    <!-- Intake Form -->
     <section class="jotform-embed-container" id="intake-form">
-        <!-- JOTFORM_EMBED_PLACEHOLDER: Replace this div with the Jotform iframe once the form ID is available -->
-        <div class="jotform-placeholder">
-            <p><strong>Intake form loading...</strong></p>
-            <p>If the form does not appear, please contact us directly.</p>
-            <code>JOTFORM_ID: PENDING_AUTHORIZATION</code>
-        </div>
-        <!-- To activate: replace the div above with:
-             <iframe src="https://form.jotform.com/JOTFORM_ID_HERE" title="Claim Verification Brief Intake" allowfullscreen></iframe>
-        -->
+        <iframe
+            id="JotFormIFrame-262141369935462"
+            title="Claim Verification Brief Intake"
+            src="https://form.jotform.com/262141369935462"
+            style="min-width:100%;max-width:100%;height:700px;border:none;"
+            scrolling="no"
+            allowfullscreen>
+        </iframe>
+        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-262141369935462']", "https://form.jotform.com/")</script>
     </section>
+
 
     <!-- Consent / Legal -->
     <section class="consent-section">
