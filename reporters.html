@@ -1,558 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Elite Q Solutions | Claim Verification Brief</title>
-    <meta name="description" content="Claim Verification Briefs for Investigative Newsrooms and Independent Journalists. $250 flat rate. Delivered in 48 hours.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0f1117;
-            --bg-card: #1a1d27;
-            --bg-card-alt: #21252f;
-            --text: #e8eaed;
-            --text-mid: #b0b8c4;
-            --text-dim: #7a8494;
-            --blue: #4b8df8;
-            --blue-hover: #3a7ce8;
-            --green: #34d399;
-            --border: #2a2e3a;
-            --radius: 10px;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            font-size: 17px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
-
-        /* — Header — */
-        header {
-            padding: 1.25rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-weight: 800;
-            font-size: 1.05rem;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: 0.03em;
-        }
-        .logo span { color: var(--blue); }
-        .badge {
-            font-size: 0.65rem;
-            font-weight: 600;
-            background: rgba(75,141,248,0.12);
-            color: var(--blue);
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(75,141,248,0.2);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        /* — Hero — */
-        .hero {
-            padding: 4rem 0 2.5rem;
-            text-align: center;
-        }
-        .hero-tag {
-            color: var(--green);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            font-size: 0.75rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .hero h1 {
-            font-size: clamp(1.75rem, 5vw, 2.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.25rem;
-            color: var(--text);
-        }
-        .hero p {
-            font-size: 1.05rem;
-            color: var(--text-mid);
-            max-width: 560px;
-            margin: 0 auto 2rem;
-            line-height: 1.7;
-        }
-
-        /* — Quick Facts — */
-        .facts {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-        .fact {
-            text-align: center;
-        }
-        .fact-value {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: var(--text);
-            display: block;
-        }
-        .fact-label {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            font-weight: 600;
-        }
-
-        /* — Buttons — */
-        .btn-row {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.85rem 2rem;
-            border-radius: var(--radius);
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-            min-height: 48px;
-        }
-        .btn-primary {
-            background: var(--blue);
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background: var(--blue-hover);
-            box-shadow: 0 4px 20px rgba(75,141,248,0.3);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--blue);
-            border: 1px solid var(--border);
-        }
-        .btn-outline:hover {
-            border-color: var(--blue);
-            background: rgba(75,141,248,0.06);
-        }
-
-        /* — Sections — */
-        section { padding: 2.5rem 0; }
-        section + section { border-top: 1px solid var(--border); }
-        h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        /* — What You Receive — */
-        .deliverables {
-            display: grid;
-            gap: 1rem;
-        }
-        .deliverable {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            padding: 1.25rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-        }
-        .deliverable-icon {
-            font-size: 1.25rem;
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(75,141,248,0.1);
-            border-radius: 8px;
-        }
-        .deliverable h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-        .deliverable p {
-            font-size: 0.95rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-        }
-
-        /* — How It Works — */
-        .steps {
-            counter-reset: step;
-        }
-        .step-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        .step-item:last-child { margin-bottom: 0; }
-        .step-num {
-            counter-increment: step;
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--blue);
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .step-num::before { content: counter(step); }
-        .step-text h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.15rem;
-        }
-        .step-text p {
-            font-size: 0.95rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-        }
-
-        /* — Sample — */
-        .sample-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .sample-card p {
-            font-size: 0.95rem;
-            color: var(--text-mid);
-        }
-
-        /* — Boundaries — */
-        .boundary-list {
-            list-style: none;
-            padding: 0;
-        }
-        .boundary-list li {
-            padding: 0.6rem 0;
-            font-size: 0.95rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-        }
-        .boundary-list li::before {
-            content: '—';
-            color: var(--text-dim);
-            flex-shrink: 0;
-        }
-
-        /* — FAQ — */
-        details {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            margin-bottom: 0.75rem;
-            background: var(--bg-card);
-        }
-        summary {
-            padding: 1rem 1.25rem;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: var(--text);
-            min-height: 48px;
-        }
-        summary::after { content: '+'; font-size: 1.1rem; color: var(--text-dim); }
-        details[open] summary::after { content: '−'; }
-        summary::-webkit-details-marker { display: none; }
-        details > div {
-            padding: 0 1.25rem 1.25rem;
-            font-size: 0.95rem;
-            color: var(--text-mid);
-            line-height: 1.7;
-        }
-
-        /* — Form — */
-        .form-section {
-            padding: 3rem 0;
-        }
-        .form-section h2 {
-            text-align: center;
-        }
-        .form-section p.form-intro {
-            text-align: center;
-            color: var(--text-mid);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-        .jotform-wrap {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        .jotform-wrap iframe {
-            width: 100%;
-            min-height: 800px;
-            border: none;
-            display: block;
-        }
-
-        /* — Footer — */
-        footer {
-            padding: 2rem 0;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-        footer p { margin-bottom: 0.25rem; }
-
-        /* — Responsive — */
-        @media (max-width: 640px) {
-            body { font-size: 17px; }
-            .hero { padding: 3rem 0 2rem; }
-            .hero h1 { font-size: 1.65rem; }
-            .facts { gap: 1.25rem; }
-            .fact-value { font-size: 1.5rem; }
-            .btn { width: 100%; padding: 1rem; min-height: 52px; }
-            .btn-row { flex-direction: column; }
-            .deliverable { flex-direction: column; gap: 0.75rem; }
-            .sample-card { flex-direction: column; text-align: center; }
-            .sample-card .btn { width: 100%; }
-        }
-
-        /* — Reduced motion — */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { transition: none !important; animation: none !important; }
-            html { scroll-behavior: auto; }
-        }
-
-        /* — Focus styles — */
-        :focus-visible {
-            outline: 2px solid var(--blue);
-            outline-offset: 2px;
-        }
-    </style>
-</head>
-<body>
-<div class="wrap">
-
-    <header>
-        <a href="/reporters" class="logo" aria-label="Elite Q Solutions home">ELITE<span>Q</span></a>
-        <span class="badge">PILOT PROGRAM</span>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
-        <span class="hero-tag">For Reporters, Editors, Researchers & Legal Professionals</span>
-        <h1 id="hero-heading">Verify claims against public records before you publish.</h1>
-        <p>One focused claim. Reviewed against corporate registries, court filings, domain records, and public financial data. Facts separated from inferences.</p>
-
-        <div class="facts" role="list" aria-label="Key details">
-            <div class="fact" role="listitem">
-                <span class="fact-value">$250</span>
-                <span class="fact-label">Flat rate</span>
-            </div>
-            <div class="fact" role="listitem">
-                <span class="fact-value">48 hrs</span>
-                <span class="fact-label">Standard delivery</span>
-            </div>
-            <div class="fact" role="listitem">
-                <span class="fact-value">1</span>
-                <span class="fact-label">Revision included</span>
-            </div>
-        </div>
-
-        <div class="btn-row">
-            <a href="#request-form" class="btn btn-primary">Start Request</a>
-            <a href="/assets/sample-reporter-brief.pdf" class="btn btn-outline" target="_blank" rel="noopener">View Sample Brief</a>
-        </div>
-    </section>
-
-    <!-- What You Receive -->
-    <section aria-labelledby="deliverables-heading">
-        <h2 id="deliverables-heading">What You Receive</h2>
-        <div class="deliverables">
-            <div class="deliverable">
-                <div class="deliverable-icon">🔍</div>
-                <div>
-                    <h3>Public Records Verification</h3>
-                    <p>Corporate registries, court dockets, property records, and financial filings cross-referenced against your claim.</p>
-                </div>
-            </div>
-            <div class="deliverable">
-                <div class="deliverable-icon">🌐</div>
-                <div>
-                    <h3>Digital Footprint Mapping</h3>
-                    <p>Historical WHOIS, DNS records, web archives, and infrastructure tracing for domains and entities involved.</p>
-                </div>
-            </div>
-            <div class="deliverable">
-                <div class="deliverable-icon">⚖️</div>
-                <div>
-                    <h3>Evidence Separation Standard</h3>
-                    <p>Every finding classified as <strong>Verified Public Record</strong> or <strong>Analytical Inference</strong>. No guesswork presented as fact.</p>
-                </div>
-            </div>
-            <div class="deliverable">
-                <div class="deliverable-icon">📄</div>
-                <div>
-                    <h3>Archive-Ready PDF</h3>
-                    <p>Timestamped, source-cited, and formatted for editorial review. Every URL archived for permanence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section aria-labelledby="process-heading">
-        <h2 id="process-heading">How It Works</h2>
-        <div class="steps">
-            <div class="step-item">
-                <div class="step-num" aria-hidden="true"></div>
-                <div class="step-text">
-                    <h3>Submit Your Claim</h3>
-                    <p>Provide the specific claim, the target entity, and any supporting context through the intake form below.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num" aria-hidden="true"></div>
-                <div class="step-text">
-                    <h3>Scope Confirmation</h3>
-                    <p>We confirm the claim is verifiable through public sources within 24 hours. If not, you receive a full refund.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num" aria-hidden="true"></div>
-                <div class="step-text">
-                    <h3>Research & Verification</h3>
-                    <p>Our analysts verify the claim against public corporate registries, court records, domain history, and open-source intelligence databases.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num" aria-hidden="true"></div>
-                <div class="step-text">
-                    <h3>Delivery</h3>
-                    <p>You receive a structured PDF clearly separating verified facts from inferences, with all sources cited and timestamped.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sample Brief -->
-    <section aria-labelledby="sample-heading">
-        <h2 id="sample-heading">Sample Brief</h2>
-        <div class="sample-card">
-            <p>See exactly what a completed Claim Verification Brief looks like — with real formatting, evidence separation, and source citations.</p>
-            <a href="/assets/sample-reporter-brief.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
-        </div>
-    </section>
-
-    <!-- Boundaries -->
-    <section aria-labelledby="boundaries-heading">
-        <h2 id="boundaries-heading">Boundaries</h2>
-        <ul class="boundary-list">
-            <li>Uses only publicly available data and open-source intelligence methods.</li>
-            <li>Does <strong>not</strong> engage in hacking, pretexting, surveillance, impersonation, or sealed-record acquisition.</li>
-            <li>Does <strong>not</strong> guarantee legal admissibility or beneficial ownership conclusions.</li>
-            <li>Explicitly separates verified public records from analytical inferences in every deliverable.</li>
-            <li>Does <strong>not</strong> share your identity or findings with third parties.</li>
-            <li><strong>Refund policy:</strong> Full refund if the claim is unverifiable through public records after scope review. No refunds after research commences.</li>
-        </ul>
-    </section>
-
-    <!-- Request Form -->
-    <section class="form-section" id="request-form" aria-labelledby="form-heading">
-        <h2 id="form-heading">Request a Verification Brief</h2>
-        <p class="form-intro">Complete the intake form below. We will confirm scope within 24 hours.</p>
-        <div class="jotform-wrap">
-            <iframe
-                id="JotFormIFrame-262141369935462"
-                title="Claim Verification Brief Intake Form"
-                src="https://form.jotform.com/262141369935462"
-                scrolling="no"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-262141369935462']", "https://form.jotform.com/")</script>
-    </section>
-
-    <!-- FAQ -->
-    <section aria-labelledby="faq-heading">
-        <h2 id="faq-heading">Frequently Asked Questions</h2>
-
-        <details>
-            <summary>What kinds of claims can you verify?</summary>
-            <div>Any factual assertion that can be checked against public records — corporate filings, court dockets, property records, domain registrations, regulatory filings, and open financial data. We cannot verify sealed records, classified information, or private communications.</div>
-        </details>
-
-        <details>
-            <summary>How is this different from a background check?</summary>
-            <div>A Claim Verification Brief is claim-specific. You submit one assertion and we verify it against public evidence. We do not produce general profiles or personal dossiers.</div>
-        </details>
-
-        <details>
-            <summary>What if the claim can't be verified?</summary>
-            <div>If we determine during scope review that the claim is unverifiable through public sources, you receive a full refund within 48 hours. If research has already begun and partial findings exist, those are delivered.</div>
-        </details>
-
-        <details>
-            <summary>Is my identity protected?</summary>
-            <div>Yes. We do not disclose client identities, the subject of inquiries, or research findings to any third party. All data is stored encrypted and deleted 90 days after delivery unless you request earlier deletion.</div>
-        </details>
-
-        <details>
-            <summary>Can I use the brief in court?</summary>
-            <div>The brief is a research product, not a legal document. It presents public-record findings and analytical inferences. Admissibility depends on your jurisdiction and use case. We recommend consulting legal counsel for evidentiary questions.</div>
-        </details>
-
-        <details>
-            <summary>What payment methods do you accept?</summary>
-            <div>Credit and debit cards via Stripe. Payment is collected after scope confirmation, before research begins.</div>
-        </details>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Elite Q Solutions LLC. All rights reserved.</p>
-        <p>This page is not indexed by search engines and is accessible by direct link only.</p>
-    </footer>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Q Solutions | Source Verification for Reporters & Researchers</title>
+<meta name="description" content="Defined-scope source verification and public-record research for reporters, editors, researchers, and professional teams.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eliteqsolutions.com/reporters.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero{padding:140px 0 70px}.hero h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.1}.hero p{max-width:760px;color:var(--text-muted);font-size:1.08rem;line-height:1.75;margin:1.2rem 0 2rem}
+.wrap{max-width:980px;margin:0 auto;padding:0 1rem 6rem}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}.card{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:10px;padding:1.4rem}
+.card h3{margin:0 0 .6rem;color:var(--accent-secondary);font-size:1.08rem}.card p,.card li,.section p{color:var(--text-muted);line-height:1.7}
+.section{margin:2.5rem 0}.notice{background:rgba(37,99,235,.08);border-left:3px solid var(--accent-primary);padding:1.2rem 1.3rem;border-radius:0 8px 8px 0;color:var(--text-muted);line-height:1.7}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header class="glass-nav">
+<div class="container nav-content">
+<a href="/" class="logo">Elite Q <span>Solutions</span></a>
+<nav>
+<a href="/#business">Business Solutions</a>
+<a href="case-studies.html">Examples</a>
+<a href="articles.html">Research Notes</a>
+<a href="/#contact" class="btn-primary" style="margin-left:2rem;">Contact</a>
+</nav>
 </div>
+</header>
+<main>
+<section class="hero container">
+<div style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-primary);font-weight:700;">Source Verification</div>
+<h1>Verify the record before you publish the claim.</h1>
+<p>Elite Q Solutions can organize public records and authorized materials around a clearly defined factual question. The output is a source-cited research brief that separates verified records, client-provided statements, assumptions, conflicting evidence, and unknowns.</p>
+<div class="hero-actions">
+<a href="/#contact" class="btn-primary">Request a Scope Review</a>
+<a href="case-studies.html" class="btn-secondary" style="border:2px solid var(--accent-primary);color:var(--accent-primary);text-decoration:none;padding:1rem 2rem;border-radius:4px;font-weight:600;">View Illustrative Samples</a>
+</div>
+</section>
+<section class="wrap">
+<div class="notice"><strong>Boundary:</strong> this is research support, not editorial approval, legal advice, licensed investigation, private-database access, surveillance, or a guarantee that a claim is safe to publish.</div>
+<div class="grid">
+<div class="card"><h3>Claim / question definition</h3><p>Start with one factual question precise enough to research and falsify.</p></div>
+<div class="card"><h3>Public-record research</h3><p>Use retrievable public records and authorized client-provided materials within the agreed source boundary.</p></div>
+<div class="card"><h3>Evidence separation</h3><p>Verified records, conflicting records, assumptions, client statements, and unknowns remain visibly distinct.</p></div>
+<div class="card"><h3>Source index</h3><p>Material findings point back to retrievable sources so an editor, reporter, counsel, or researcher can independently review them.</p></div>
+</div><div class="section">
+<h2>What the brief can answer</h2>
+<p>Examples include whether a public filing exists, whether two dated public statements conflict, whether an entity record contains a named officer or registered agent, whether a public page changed over time, or whether a public claim is supported by the currently available record.</p>
+</div>
+<div class="section">
+<h2>What it does not establish</h2>
+<p>Intent, guilt, beneficial ownership, credibility, legal liability, admissibility, editorial sufficiency, or the absence of additional non-public facts. A source-cited contradiction is still a research finding—not an accusation.</p>
+</div>
+<div class="section">
+<h2>Engagement process</h2>
+<div class="grid">
+<div class="card"><h3>1. Define</h3><p>Describe the specific claim or record question at a high level.</p></div>
+<div class="card"><h3>2. Scope</h3><p>Sources, exclusions, deliverable, timing, handling expectations, and price are confirmed in writing before work begins.</p></div>
+<div class="card"><h3>3. Research</h3><p>Elite Q works within the agreed public / authorized source boundary and records limitations as they arise.</p></div>
+<div class="card"><h3>4. Deliver</h3><p>You receive a written brief designed for independent editorial or professional review.</p></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:3rem;">
+<h2>Start with one verifiable question.</h2>
+<p style="max-width:650px;margin:0 auto 1.5rem;color:var(--text-muted);">Do not submit passwords, confidential source identities, account credentials, or unnecessary sensitive personal data during initial intake.</p>
+<a href="/#contact" class="btn-primary">Request a Scope Review</a>
+</div>
+</section>
+</main><footer>
+<div class="container footer-content">
+<div class="logo" style="justify-content:center;margin-bottom:1rem;">Elite Q <span>Solutions</span></div>
+<div class="social-links"><a href="case-studies.html">Examples</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:qualla.t@eliteqsolutions.com">qualla.t@eliteqsolutions.com</a></div>
+<p>&copy; 2026 Elite Q Solutions LLC. All Rights Reserved.</p>
+<p style="font-size:.75rem;color:var(--text-muted);max-width:690px;margin:1rem auto 0;">Elite Q Solutions LLC is a technology-enabled research and opportunity-qualification company. We do not operate as a law firm, licensed private-investigation agency, financial auditor, forensic laboratory, or certification body.</p>
+</div>
+</footer>
 </body>
 </html>
